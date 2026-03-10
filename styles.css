@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+} /*padrão de todos doc css*/
+
+/* asterisco = tudo*/
+/*seletor*/
+/*propridade:valor;*/
+
+body {
+    background: #09090b; /* cor de fundo*/
+    color: #e4e4e7; /* cor dos textos*/
+    padding: 40px; /* encaixe no "lado de dentro" do body*/
+    display: flex; /*mostra os itens - libera propriedades que ajustam*/
+    flex-direction:column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 30px; /*tamanho do texto*/
+    color: #fafafa;
+    font-weight: bold; /* grossura da fonte - negrito*/
+}
+
+span {
+    color: #e53a3a;
+}
+
+p {
+    color:#979797;
+    margin: 10px;
+}
+
+textarea{
+    resize: none; /* redimensionar*/
+    width: 100%; /* largura */ 
+    max-width: 640px; /* limita o tamanho máximo*/
+    padding: 12px; /* espaçamento na parte de dentro*/
+    border: 2px solid #f13737; /*trocar a cor da borda*/
+    border-radius: 10px; /*arredondamento das bordas*/
+    background: #09090b; 
+    color: #fafafa; /* cor do texto*/
+    outline: none; /*cor de seleção feia*/
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.5;
+    height: 120px;
+
+}
+
+button {
+    width: 100%;
+    max-width: 640px;
+    background: #e73232;
+    font-size: 14px; /*tamanho do texto*/
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    padding: 14px;
+    cursor: pointer;
+    margin-top: 10px; /*se fosse sem o top ele
+     ficaria com afastamento em todos os lados 
+        top - cima / bottom - baixo / 
+        left - esq / right - dir*/
+}
+
+.bloco-codigo {
+   background: #09090b;
+   border: 1px solid #f13737;
+   border-radius: 12px;
+   padding: 12px;
+   font-size: 16px;
+   margin: 10px;
+   line-height: 1.5;
+   overflow: auto;
+   width: 100%;
+   max-width: 640px;
+   height: 100%;
+
+}
