@@ -32,7 +32,7 @@
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": "Bearer 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" //ou pega e cola a chave//
+            "Authorization": `Bearer ${API_KEY}` //ou pega e cola a chave//
         },
         body: JSON.stringify({
             model: "llama-3.3-70b-versatile",
