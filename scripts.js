@@ -33,3 +33,4 @@ async function gerarCodigo() {
 botao.addEventListener("click", gerarCodigo);
  // adicionar ouvinte de eventos 
  // eventos: cliques, digitar...
+ // ajuste básico
