@@ -9,7 +9,7 @@ async function gerarCodigo() {
     }
 
     try {
-        let resposta = await fetch('http://localhost:3000/reescrita', {
+        let resposta = await fetch('/reescrita', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -18,6 +18,10 @@ async function gerarCodigo() {
                 texto: textoUsuario
             })
         });
+
+        if (!resposta.ok) {
+            throw new Error(`Servidor respondeu com status ${resposta.status}`);
+        }
 
         let dados = await resposta.json();
         if (dados.resultado) {
