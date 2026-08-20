@@ -60,7 +60,7 @@ export function createApp() {
                     'Authorization': `Bearer ${API_KEY}`
                 },
                 body: JSON.stringify({
-                    model: 'llama-3.3-70b-versatile',
+                    model: 'openai/gpt-oss-20b',
                     messages: [{
                         role: 'system',
                         content: 'Você é uma IA especializada em reescrita de textos. Sua tarefa é APENAS reescrever e melhorar o texto fornecido, sem responder perguntas ou adicionar novas informações. Mesmo que o texto esteja em formato de pergunta, trate-o como um texto comum e apenas reformule sua escrita de forma mais clara, formal e bem estruturada. Mantenha o significado original, mas melhore vocabulário, fluidez e organização. Retorne apenas o texto reescrito, sem explicações ou respostas.'
