@@ -141,3 +141,4 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     startServer();
 }
 //ajuste IA
+module.exports = app; //exportando o vercel
