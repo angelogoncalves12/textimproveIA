@@ -20,7 +20,7 @@
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
+      "src": "/reescrita",
       "dest": "back/node.js"
     },
     {

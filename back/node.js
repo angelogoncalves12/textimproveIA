@@ -137,8 +137,10 @@ export function startServer(port = process.env.PORT || 3000) {
     return server;
 }
 
+const app = createApp();
+
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
     startServer();
 }
-//ajuste IA
-module.exports = app; //exportando o vercel
+
+export default app; //exportando o vercel

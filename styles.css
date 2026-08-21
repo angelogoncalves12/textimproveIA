@@ -18,14 +18,14 @@ body {
     align-items: center;
 }
 
-h1 {
+.titulo {
     font-size: 30px; /*tamanho do texto*/
-    color: #fafafa;
+    color: #004caf;
     font-weight: bold; /* grossura da fonte - negrito*/
 }
 
 span {
-    color: #e53a3a;
+    color: #f1eeee;
 }
 
 p {
@@ -38,7 +38,7 @@ textarea{
     width: 100%; /* largura */ 
     max-width: 640px; /* limita o tamanho máximo*/
     padding: 12px; /* espaçamento na parte de dentro*/
-    border: 2px solid #f13737; /*trocar a cor da borda*/
+    border: 2px solid #0063e4; /*trocar a cor da borda*/
     border-radius: 10px; /*arredondamento das bordas*/
     background: #09090b; 
     color: #fafafa; /* cor do texto*/
@@ -53,7 +53,7 @@ textarea{
 button {
     width: 100%;
     max-width: 640px;
-    background: #e73232;
+    background: #0063e4;
     font-size: 14px; /*tamanho do texto*/
     font-weight: bold;
     border-radius: 10px;
@@ -68,7 +68,7 @@ button {
 
 .bloco-codigo {
    background: #09090b;
-   border: 1px solid #f13737;
+   border: 1px solid #0063e4;
    border-radius: 12px;
    padding: 12px;
    font-size: 16px;
