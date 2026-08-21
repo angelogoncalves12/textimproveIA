@@ -19,7 +19,7 @@ body {
 }
 
 .titulo {
-    font-size: 30px; /*tamanho do texto*/
+    font-size: 50px; /*tamanho do texto*/
     color: #004caf;
     font-weight: bold; /* grossura da fonte - negrito*/
 }
@@ -103,3 +103,20 @@ button {
     }
 } 
 
+.uso {
+    
+    color: #9bc0ff;
+    font-size: 30px;
+}
+
+.uso2 {
+    padding-top: 50px;
+    color: #9bc0ff;
+    font-size: 30px;
+}
+.about {
+    padding-top: 100px;
+    position: center;
+    width: 100%; /* largura */ 
+    max-width: 700px; /
+}
