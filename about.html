@@ -1,31 +1,66 @@
-<!DOCTYPE html> <!--versão do html-->
+<!DOCTYPE html> <!-- versão do html -->
 
 <html lang="pt-br">
-<!-- lembrar de ativar o live server -->
 
 <head>
-    <meta charset="UTF-8"> <!-- padrão de caracteres-->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"> <!-- relationship with css-->
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+    <title> Sobre: MAXIMUM AI </title>
 </head>
+
 <body>
-      <div class="menu">
-        <a href="index.html" class="btn-menu">VOLTAR</a> 
-        <a href="https://www.instagram.com/correiasvz/" class="btn-menu">FALE COMIGO</a>
-        <a href="https://github.com/angelogoncalves12/textimproveIA" class="btn-menu">ACOMPANHE</a>
+    <!-- Menu do About: possui o botão VOLTAR para a home e não redireciona para si mesmo -->
+    <div class="menu">
+        <a href="index.html" class="btn-menu">⬅ VOLTAR AO INÍCIO</a>
+        <a href="https://github.com/angelogoncalves12/maximumAI" target="_blank" class="btn-menu">PROJETO</a>
+        <a href="https://www.instagram.com/correiasvz/" target="_blank" class="btn-menu">FALE COMIGO</a>
         <a href="doacoes.html" class="btn-menu">APOIE-ME</a>
     </div>
- 
-    <div class="about">
-     <h3 class="uso"> O QUE É O MAXIMUM IA </h3>
-     <p> O Maximum IA é um formatador de textos, utilizando suas próprias palavras, produz um texto formal, sem alterar o sentido.</p>
-     <h3 class="uso2"> QUAL A VANTAGEM DE USAR MAXIMUM IA? </h3>
-<p> O Maximum é um agente de IA treinado e otimizado unicamente para linguagem empresarial e formatação textual, não necessitando de treinamento externo ou sofrendo de abstrações desecessárias</p>
-</div>
+
+    <!-- Clicar no logo também volta para o index.html -->
+    <a href="index.html" class="logo-container">
+        <img src="assets/logomax.png" alt="Logotipo gráfico" class="logo-icon">
+        <img src="assets/maxxiatext.png" alt="Maximum AI texto" class="logo-text"> 
+    </a>
+
+    <h2 class="destaque"> Conheça os Bastidores do Projeto 💡</h2>
+
+    <!-- Conteúdo explicativo estruturado com o mesmo estilo dos cards do site -->
+    <div class="about" style="margin-top: 15px;">
+        
+        <div class="bloco-codigo" style="padding: 22px; min-height: auto; margin-bottom: 16px;">
+            <h3 class="uso" style="margin-top: 0;">📌 O QUE É O MAXIMUM IA?</h3>
+            <p>O <strong>Maximum AI</strong> é um formatador inteligente de textos corporativos. Utilizando suas próprias palavras e contexto, ele produz um texto formal, polido e elegante sem alterar o sentido original da sua mensagem.</p>
+        </div>
+
+        <div class="bloco-codigo" style="padding: 22px; min-height: auto; margin-bottom: 16px;">
+            <h3 class="uso" style="margin-top: 0;">🚀 QUAL A VANTAGEM DE USAR O MAXIMUM IA?</h3>
+            <p>O Maximum é um agente otimizado unicamente para linguagem empresarial. Diferente de chats convencionais que geram enrolação e textos gigantes, ele entrega a resposta pronta para envio em segundos, sem necessitar de instruções extras ou abstrações desnecessárias.</p>
+        </div>
+
+        <div class="bloco-codigo" style="padding: 22px; min-height: auto; margin-bottom: 16px;">
+            <h3 class="uso" style="margin-top: 0;">💼 COMO ELE PODE TE AJUDAR?</h3>
+            <p>• <strong>E-mails Profissionais:</strong> Transforme rascunhos rápidos em mensagens executivas impecáveis.<br>
+               • <strong>Tolerância a Erros:</strong> Dedução contextual de erros ortográficos graves e digitação rápida.<br>
+               • <strong>Comunicação Assertiva:</strong> Traduza desabafos e gírias em críticas construtivas e alinhamentos de trabalho.</p>
+        </div>
+
+        <div class="bloco-codigo" style="padding: 22px; min-height: auto; margin-bottom: 16px;">
+            <h3 class="uso" style="margin-top: 0;">👨‍💻 QUEM É O DESENVOLVEDOR?</h3>
+            <p>Desenvolvido com dedicação por <strong>ClangsDev</strong> (<a href="https://www.instagram.com/correiasvz/" target="_blank" style="color: #0084ff; text-decoration: none; font-weight: bold;">@correiasvz</a>). O projeto nasceu para aplicar conceitos avançados de Front-end e Node.js com foco em segurança de API e privacidade de dados.</p>
+        </div>
+
+    </div>
+    
+    <p class="direitos">Desenvolvido por ClangsDev (@correiasvz)</p>
 </body>
+
+<!-- Script para manter o efeito de rastro do mouse e animações no about -->
+<script src="scripts.js"></script> 
 </html>

@@ -1,12 +1,12 @@
-<!DOCTYPE html> <!--versão do html-->
+<!DOCTYPE html> <!-- versão do html -->
 
 <html lang="pt-br">
 <!-- lembrar de ativar o live server -->
 
 <head>
-    <meta charset="UTF-8"> <!-- padrão de caracteres-->
+    <meta charset="UTF-8"> <!-- padrão de caracteres (acentos e ç funcionam perfeitamente) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"> <!-- relationship with css-->
+    <link rel="stylesheet" href="styles.css"> <!-- relacionamento com o css externo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -18,35 +18,44 @@
 </head>
 
 <body>
+    <!-- Menu de navegação principal -->
     <div class="menu">
         <a href="about.html" class="btn-menu">SOBRE</a>
-        <a href="https://www.instagram.com/correiasvz/" class="btn-menu">FALE COMIGO</a>
-        <a href="https://github.com/angelogoncalves12/textimproveIA" class="btn-menu">ACOMPANHE</a>
+        <!-- target="_blank" faz o link abrir em uma nova aba do navegador sem fechar o site -->
+        <a href="https://github.com/angelogoncalves12/maximumAI" target="_blank" class="btn-menu">PROJETO</a>
+        <a href="https://www.instagram.com/correiasvz/" target="_blank" class="btn-menu">FALE COMIGO</a>
         <a href="doacoes.html" class="btn-menu">APOIE-ME</a>
     </div>
 
+    <!-- Logotipo oficial: clicar nele recarrega o próprio index.html -->
+    <a href="index.html" class="logo-container">
+        <img src="assets/logomax.png" alt="Logotipo gráfico" class="logo-icon">
+        <img src="assets/maxxiatext.png" alt="Maximum AI texto" class="logo-text"> 
+    </a>
 
- 
-   <a href="index.html" class="logo-container">
-    <img src="assets/logomax.png" alt="Logotipo gráfico" class="logo-icon">
-    <img src="assets/maxxiatext.png" alt="Maximum AI texto" class="logo-text"> 
-</a>
-    <h2 class="destaque">  Formatação Formal 🖋️</h2>
+    <h2 class="destaque"> Formatação Formal 🖋️</h2>
     
-
-    <textarea rows:"3" class="caixa-texto" placeholder="Ex: Escreva o seu teste"> </textarea>
-    <!--3 linhas: rows-->
+    <!-- rows="3": altura base de 3 linhas de texto -->
+    <textarea rows="3" class="caixa-texto" placeholder="Ex: Escreva o seu texto informal aqui..."></textarea>
+    
     <button class="botao-transcreva">
         Transcreva seu texto
     </button>
-    <p class="bloco-codigo"> </p>
+
+    <!-- Onde a resposta gerada pela IA via scripts.js vai aparecer -->
+    <p class="bloco-codigo"></p>
+   
+    <!-- Tag de manifesto técnico: Anti-Vibecoding -->
+<div class="aviso-manifesto">
+    <span>🛡️</span>
+    <p>Este projeto <strong>não compactua com Vibe Coding</strong> — desenvolvimento com estudo de segurança, Node.js e arquitetura consciente.</p>
+</div>
     
+    <!-- Rodapé fixo na tela -->
     <p class="direitos">Desenvolvido por ClangsDev (@correiasvz)</p>
 </body>
-<script src="scripts.js"> 
 
-</script> 
-<!-- js vem depois de todo css e html, 
-ele ministrará informações
-src: source - origem -->
+<!-- JS vem no final do body para não travar o carregamento visual da página
+     src: source - origem do arquivo -->
+<script src="scripts.js"></script> 
 </html>

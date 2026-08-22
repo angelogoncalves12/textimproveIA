@@ -49,3 +49,27 @@ botao.addEventListener("click", gerarCodigo);
  // adicionar ouvinte de eventos 
  // eventos: cliques, digitar...
  // ajuste básico
+
+// TRAIL GLOW
+let mouseX = window.innerWidth / 2;
+let mouseY = window.innerHeight / 2;
+let glowX = mouseX;
+let glowY = mouseY;
+
+window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+
+function animateGlow() {
+    // 0.08 é a velocidade do rastro (quanto menor, mais suave e atrasado o rastro fica)
+    glowX += (mouseX - glowX) * 0.08;
+    glowY += (mouseY - glowY) * 0.08;
+
+    document.body.style.setProperty('--mouse-x', `${glowX}px`);
+    document.body.style.setProperty('--mouse-y', `${glowY}px`);
+
+    requestAnimationFrame(animateGlow);
+}
+
+animateGlow();

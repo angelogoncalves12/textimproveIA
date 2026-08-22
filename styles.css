@@ -1,87 +1,199 @@
 * {
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
-} /*padrão de todos doc css*/
-
-/* asterisco = tudo*/
-/*seletor*/
-/*propridade:valor;*/
+} /* padrão de todos doc css: zera margem e não deixa a borda estourar o tamanho */
 
 body {
-    background: #09090b; /* cor de fundo*/
-    color: #e4e4e7; /* cor dos textos*/
-    padding: 40px 40px 120px; /* espaço extra no final para o rodapé fixo */
-    display: flex; /*mostra os itens - libera propriedades que ajustam*/
-    flex-direction:column;
+    min-height: 100vh;
+    /* Fundo Azul Noite Profundo (adeus preto 100% chapado que ofuscava tudo) */
+    background-color: #0b101b;
+    /* Mistura 2 fundos: a luz do mouse + um degradê suave do topo até o chão */
+    background-image: 
+        radial-gradient(650px circle at var(--mouse-x, 50%) var(--mouse-y, 25%), rgba(0, 119, 255, 0.12) 0%, transparent 70%),
+        linear-gradient(180deg, #0d1527 0%, #0b101b 60%, #080c15 100%);
+    background-attachment: fixed; /* trava o fundo no lugar enquanto rola a página */
+    color: #e2e8f0;
+    padding: 30px 20px 120px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-.titulo {
-    font-size: 50px; /*tamanho do texto*/
-    color: #004caf;
-    font-weight: bold; /* grossura da fonte - negrito*/
+/* MENU SUPERIOR (Glassmorphism) */
+.menu {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap; /* se a tela for pequena, os botões quebram linha bonitinho */
+    justify-content: center;
+    margin-bottom: 25px;
 }
 
-span {
-    color: #f1eeee;
+.btn-menu {
+    display: inline-block;
+    /* Fundo quase invisível + borda fininha pra parecer vidro fosco */
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 20px; /* Estilo pílula moderno */
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    backdrop-filter: blur(8px); /* embaça o que passar por trás do botão (puro suco de luxo) */
+    transition: all 0.25s ease;
 }
 
-p {
-    color:#979797;
-    margin: 10px;
+.btn-menu:hover {
+    background: rgba(0, 119, 255, 0.15);
+    border-color: rgba(0, 119, 255, 0.4);
+    color: #ffffff;
+    transform: translateY(-2px); /* dá um pulinho de 2px pra cima quando passa o mouse */
 }
 
-textarea{
-    resize: none; /* redimensionar*/
-    width: 100%; /* largura */ 
-    max-width: 640px; /* limita o tamanho máximo*/
-    padding: 12px; /* espaçamento na parte de dentro*/
-    border: 2px solid #0063e4; /*trocar a cor da borda*/
-    border-radius: 10px; /*arredondamento das bordas*/
-    background: #09090b; 
-    color: #fafafa; /* cor do texto*/
-    outline: none; /*cor de seleção feia*/
-    margin-top: 20px;
-    font-size: 15px;
-    line-height: 1.5;
-    height: 120px;
-
+/* LOGO & CONTAINER */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    transition: transform 0.3s ease;
 }
 
-button {
+.logo-container:hover {
+    transform: scale(1.02); /* dá uma leve crescidinha quando bota o mouse */
+}
+
+/* Ícone */
+.logo-icon {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    /* drop-shadow brilha contornando o PNG recortado, diferente do box-shadow que brilha num quadrado feio */
+    filter: drop-shadow(0 0 14px rgba(0, 119, 255, 0.45));
+}
+
+/* Texto da Logo */
+.logo-text {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    margin-left: -20px; /* puxa pra dentro do espaço do ícone */
+    transform: translateY(6px); /* desce um tiquinho pra alinhar com o centro do ícone */
+    filter: drop-shadow(0 0 10px rgba(0, 119, 255, 0.4));
+}
+
+/* Subtítulo */
+.destaque {
+    color: #f1f5f9;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    letter-spacing: -0.3px;
+}
+
+
+textarea.caixa-texto {
+    resize: none;
     width: 100%;
     max-width: 640px;
-    background: #0063e4;
-    font-size: 14px; /*tamanho do texto*/
-    font-weight: bold;
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    background: #111827; /* cinza azulado escuro pro texto contrastar perfeito */
+    color: #f8fafc;
+    outline: none; /* tira aquela borda preta/branca feia do navegador */
+    font-size: 15px;
+    line-height: 1.6;
+    height: 130px;
+    transition: all 0.25s ease;
+}
+
+textarea.caixa-texto:focus {
+    border-color: #0084ff;
+    /* quando clica pra digitar, acende um anel azul suave em volta */
+    box-shadow: 0 0 0 3px rgba(0, 132, 255, 0.2);
+    background: #131c2e;
+}
+
+
+button.botao-transcreva {
+    width: 100%;
+    max-width: 640px;
+    /* Gradiente Azul Metálico idêntico à paleta oficial da logo (sem roxo perdido) */
+    background: linear-gradient(135deg, #0052cc 0%, #0077ff 50%, #0099ff 100%);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
     border-radius: 10px;
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 14px;
     cursor: pointer;
-    margin-top: 10px; /*se fosse sem o top ele
-     ficaria com afastamento em todos os lados 
-        top - cima / bottom - baixo / 
-        left - esq / right - dir*/
+    margin-top: 14px;
+    box-shadow: 0 4px 16px rgba(0, 119, 255, 0.3);
+    transition: all 0.25s ease;
 }
 
+button.botao-transcreva:hover {
+    background: linear-gradient(135deg, #0060eb 0%, #0088ff 50%, #1ab0ff 100%);
+    box-shadow: 0 6px 24px rgba(0, 132, 255, 0.45);
+    transform: translateY(-2px);
+}
+
+button.botao-transcreva:active {
+    transform: translateY(0); /* volta pro lugar quando afunda o clique */
+    box-shadow: 0 2px 10px rgba(0, 119, 255, 0.3);
+}
+
+/* QUADRO DO TEXTO REESCRITO  */
 .bloco-codigo {
-   background: #09090b;
-   border: 1px solid #0063e4;
-   border-radius: 12px;
-   padding: 12px;
-   font-size: 16px;
-   margin: 10px;
-   line-height: 1.5;
-   overflow: auto;
-   width: 100%;
-   max-width: 640px;
-   height: 100%;
-
+    background: #111827;
+    border: 1px solid rgba(0, 132, 255, 0.25);
+    border-radius: 12px;
+    padding: 18px;
+    font-size: 15px;
+    color: #e2e8f0;
+    margin-top: 16px;
+    line-height: 1.6;
+    overflow: auto; /* se o texto for gigante cria barra de rolagem */
+    width: 100%;
+    max-width: 640px;
+    min-height: 80px;
 }
 
-/* Rodapé fixo com direitos autorais */
+/* === SEÇÃO SOBRE / EXPLICAÇÃO === */
+.about {
+    margin-top: 60px;
+    width: 100%;
+    max-width: 640px;
+}
+
+.uso, .uso2 {
+    color: #93c5fd;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.about p {
+    color: #94a3b8;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+/* === RODAPÉ === */
 .direitos {
     position: fixed;
     left: 0;
@@ -89,87 +201,153 @@ button {
     bottom: 0;
     text-align: center;
     padding: 12px 16px;
-    color: #9ca3af;
-    background: rgba(0,0,0,0.35);
-    font-size: 14px;
-    z-index: 1000;
+    color: #94a3b8;
+    background: rgba(11, 16, 27, 0.85);
+    backdrop-filter: blur(10px); /* vidro embaçado de fundo */
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 13px;
+    z-index: 1000; /* garante que fique sempre por cima de qualquer elemento ao rolar */
 }
 
-/*adaptação para telas menores*/
 @media (max-width: 480px) {
     .direitos {
         font-size: 12px;
         padding: 10px;
     }
-} 
-
-.uso {
-    
-    color: #9bc0ff;
-    font-size: 30px;
 }
 
-.uso2 {
-    padding-top: 50px;
-    color: #9bc0ff;
-    font-size: 30px;
-}
-.about {
-    padding-top: 100px;
-    width: 100%; 
-    max-width: 700px;
+/* ===================================================
+   aquelas degracinha de animação mt foda
+=================================================== */
+
+@keyframes surgirSuave {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* começa 20px mais pra baixo e invisível */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* sobe pro lugar original e 100% visível */
+    }
 }
 
-/* Container que segura os dois */
+/* MENU SUPERIOR (cada um tem um tempinho p entrar) */
+/* cubic-bezier é a curva de velocidade: começa rápido e desacelera gostosinho igual app da Apple */
+.menu .btn-menu {
+    opacity: 0;
+    animation: surgirSuave 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.menu .btn-menu:nth-child(1) { animation-delay: 0.1s; }
+.menu .btn-menu:nth-child(2) { animation-delay: 0.2s; }
+.menu .btn-menu:nth-child(3) { animation-delay: 0.3s; }
+.menu .btn-menu:nth-child(4) { animation-delay: 0.4s; }
+
+/* logotipo */
 .logo-container {
-    padding-left: 50px;
-    display: flex;
+    opacity: 0;
+    animation: surgirSuave 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+}
+.destaque {
+    opacity: 0;
+    animation: surgirSuave 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.65s forwards;
+}
+
+/* deck principal */
+textarea.caixa-texto {
+    opacity: 0;
+    animation: surgirSuave 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
+}
+button.botao-transcreva {
+    opacity: 0;
+    animation: surgirSuave 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.95s forwards;
+}
+
+/* bloco codigo e o sobre */
+.bloco-codigo, .about {
+    opacity: 0;
+    animation: surgirSuave 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.1s forwards;
+}
+
+/* rodape que demora mais pq fds */
+.direitos {
+    opacity: 0;
+    animation: surgirSuave 0.8s ease 1.3s forwards;
+}
+
+/* antivibe coding  */
+.aviso-manifesto {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    gap: 0px;
-    margin-bottom: 12px;
-    text-decoration: none; /* Remove decorações de link */
-    cursor: pointer; 
-    padding-top: 50px;      /* Mostra o ícone de clique (mãozinha) */
-}
-
-/* Ajustes no Ícone */
-.logo-icon {
-    height: 110px;             /* Reduzi um pouco para ficar mais proporcional */
-    width: auto;
-    object-fit: contain;
-    display: block;
-}
-
-/* Ajustes no Texto */
-.logo-text {
-    height: 100px;              /* Ajuste de proporção */
-    width: auto;
-    object-fit: contain;
-    display: block;
-    margin-left: -50px;        
-    transform: translateY(13px);
-}
-
-.menu {
-    justify-content: left;
-
-}
-.btn-menu {
-    display: inline-block;
-    background-color: #0063e4;
-    color: #ffffff;
-    text-decoration: none;  /* Remove o sublinhado do link */
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 14px;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    max-width: 640px;
     text-align: center;
-    cursor: pointer;
-    transition: background 0.2s ease;
+    backdrop-filter: blur(6px);
+    cursor: default; /* cursor normal */
+    transition: border-color 0.3s ease, background 0.3s ease;
     
+    /* Entrada suave ao abrir o site */
+    opacity: 0;
+    animation: surgirSuave 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.45s forwards;
 }
 
-.btn-menu:hover {
-    background-color: #004caf; /* Efeito ao passar o mouse */
+/* Leve realce ao passar o mouse */
+.aviso-manifesto:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Feixe de luz metálico (inicia escondido à esquerda) */
+.aviso-manifesto::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(
+        115deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.18) 50%,
+        transparent 100%
+    );
+    transform: skewX(-20deg);
+    pointer-events: none;
+}
+
+/* ⚡ QUANDO PASSA O MOUSE: O feixe metálico cruza o bloco suavemente */
+.aviso-manifesto:hover::after {
+    animation: brilhoHover 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes brilhoHover {
+    0% {
+        left: -120%;
+    }
+    100% {
+        left: 200%;
+    }
+}
+
+.aviso-manifesto span {
+    font-size: 13px;
+    z-index: 1;
+}
+
+.aviso-manifesto p {
+    color: #94a3b8;
+    font-size: 12px;
+    margin: 0;
+    letter-spacing: 0.2px;
+    z-index: 1;
+}
+
+.aviso-manifesto strong {
+    color: #e2e8f0;
 }
