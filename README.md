@@ -5,12 +5,12 @@
   <img src="assets/maxxiatext.png" alt="Maximum AI Texto" width="220"/>
 
   <h1>MAXIMUM AI — Agente de Aprimoramento Textual</h1>
-  <p><strong>Site minimalista integrado a um Agente de IA (LLaMA) para formatação de texto empresarial.</strong></p>
+  <p><strong>Site minimalista integrado a um Agente de IA (OpenAi) para formatação de texto empresarial.</strong></p>
 
   <!-- Badges -->
   <p>
     <img src="https://img.shields.io/badge/Status-Finalizado-success?style=for-the-badge" alt="Status"/>
-    <img src="https://img.shields.io/badge/AI_Model-LLaMA-blue?style=for-the-badge&logo=meta" alt="LLaMA"/>
+    <img src="https://img.shields.io/badge/OpenAI-GPT-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI"/>
     <img src="https://img.shields.io/badge/Node.js-Backend%20Security-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js"/>
     <img src="https://img.shields.io/badge/HTML5%20%2F%20CSS3-Frontend-orange?style=for-the-badge" alt="Frontend"/>
   </p>
@@ -21,13 +21,11 @@
 
 ## 📌 Sobre o Projeto
 
-O **Maximum AI** é uma aplicação web minimalista focada no aprimoramento e formatação de textos corporativos. Utilizando as próprias palavras do usuário, o agente de IA baseado no modelo **LLaMA** produz uma versão formal, polida e profissional sem alterar o sentido original do texto.
+O **Maximum AI** é uma aplicação web minimalista focada no aprimoramento e formatação de textos corporativos. Utilizando as próprias palavras do usuário, o agente de IA baseado no modelo **OpenAI 20b** produz uma versão formal, polida e profissional sem alterar o sentido original do texto.
 
 ---
 
 ## 🔒 Segurança em Primeiro Lugar (A Jornada do Projeto)
-
-> *“Aprender Front-end não significa ignorar as boas práticas de segurança.”*
 
 Este projeto nasceu durante meus estudos de consumo de Inteligência Artificial gratuita pelo **DevClub**. Contudo, ao analisar a estrutura padrão apresentada nas aulas, identifiquei um problema crítico de segurança: **a API Key ficava exposta diretamente no código Front-end**, vulnerável a vazamentos no GitHub.
 
@@ -53,7 +51,7 @@ Mesmo sendo um projeto originalmente focado em Front-end, decidi dar um passo al
 
 - **Frontend:** HTML5 semântico, CSS3 Moderno (Flexbox & Dark Theme), JavaScript Vanilla.
 - **Backend / Segurança:** Node.js, Express (ou servidor HTTP para requisições seguras), `.env` e `.gitignore`.
-- **Inteligência Artificial:** Modelo LLaMA.
+- **Inteligência Artificial:** Modelo OpenAI.
 
 ---
 
