@@ -164,3 +164,4 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
 
 // Entrega essa delicia pronto para a Vercel ligar na nuvem sempre que alguém usar
 export default app;
+

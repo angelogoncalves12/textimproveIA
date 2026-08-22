@@ -116,7 +116,60 @@ button {
 }
 .about {
     padding-top: 100px;
-    position: center;
-    width: 100%; /* largura */ 
-    max-width: 700px; /
+    width: 100%; 
+    max-width: 700px;
+}
+
+/* Container que segura os dois */
+.logo-container {
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    margin-bottom: 12px;
+    text-decoration: none; /* Remove decorações de link */
+    cursor: pointer; 
+    padding-top: 50px;      /* Mostra o ícone de clique (mãozinha) */
+}
+
+/* Ajustes no Ícone */
+.logo-icon {
+    height: 110px;             /* Reduzi um pouco para ficar mais proporcional */
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Ajustes no Texto */
+.logo-text {
+    height: 100px;              /* Ajuste de proporção */
+    width: auto;
+    object-fit: contain;
+    display: block;
+    margin-left: -50px;        
+    transform: translateY(13px);
+}
+
+.menu {
+    justify-content: left;
+
+}
+.btn-menu {
+    display: inline-block;
+    background-color: #0063e4;
+    color: #ffffff;
+    text-decoration: none;  /* Remove o sublinhado do link */
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    
+}
+
+.btn-menu:hover {
+    background-color: #004caf; /* Efeito ao passar o mouse */
 }
