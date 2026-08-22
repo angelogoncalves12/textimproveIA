@@ -1,8 +1,3 @@
-Aqui está o seu **`README.md`** completo, unindo o design profissional com toda a sua história de desenvolvimento, o foco em segurança da API Key, a integração com o modelo LLaMA e a sua filosofia de estudo:
-
----
-
-```markdown
 <div align="center">
 
   <!-- Logo do Projeto -->
