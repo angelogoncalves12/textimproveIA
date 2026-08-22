@@ -9,11 +9,11 @@
 
   <!-- Badges -->
   <p>
-    <img src="https://img.shields.io/badge/Status-Finalizado-success?style=for-the-badge" alt="Status"/>
-    <img src="https://img.shields.io/badge/OpenAI-GPT-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI"/>
-    <img src="https://img.shields.io/badge/Node.js-Backend%20Security-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js"/>
-    <img src="https://img.shields.io/badge/HTML5%20%2F%20CSS3-Frontend-orange?style=for-the-badge" alt="Frontend"/>
-  </p>
+  <img src="https://img.shields.io/badge/Status-Em%20Andamento-yellow?style=for-the-badge" alt="Status"/>
+  <img src="https://img.shields.io/badge/AI_Model-OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI"/>
+  <img src="https://img.shields.io/badge/Node.js-Backend%20Security-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js"/>
+  <img src="https://img.shields.io/badge/HTML5%20%2F%20CSS3-Frontend-orange?style=for-the-badge" alt="Frontend"/>
+</p>
 
 </div>
 
